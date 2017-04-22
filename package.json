@@ -1,0 +1,36 @@
+{
+  "name": "ozbo",
+  "version": "0.0.1",
+  "description": "Desktop toy",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build-css": "node-sass --include-path scss scss/main.scss css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PingSquad/Ozbo.git"
+  },
+  "author": {
+    "name": "PingSquad",
+    "url": "https://github.com/PingSquad"
+  },
+  "contributors": [
+    {
+      "name": "UltimatePancake",
+      "email": "pier.gaetani@gmail.com",
+      "url": "https://github.com/UltimatePancake"
+    }
+  ],
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/PingSquad/Ozbo/issues"
+  },
+  "homepage": "https://github.com/PingSquad/Ozbo#readme",
+  "devDependencies": {
+    "electron": "^1.6.5",
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0"
+  }
+}
