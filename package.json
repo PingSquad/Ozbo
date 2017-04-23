@@ -6,8 +6,8 @@
   "scripts": {
     "prestart": "node-sass --include-path scss scss/main.scss css/main.css",
     "start": "electron .",
-    "build-css": "node-sass --include-path scss scss/main.scss css/main.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "build-css": "node-sass --include-path sass sass/main.sass css/main.css",
+    "watch-css": "nodemon -e sass -x \"npm run build-css\""
   },
   "repository": {
     "type": "git",
