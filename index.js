@@ -8,10 +8,9 @@ const browserWindow = electron.BrowserWindow;
 var mainWindow;
 app.on('ready', function(){
     mainWindow = new browserWindow({
-      width: 200,
-      height: 200,
       transparent: true,
-      frame: false
+      frame: false,
+      fullscreen: true
     });
 
     mainWindow.loadURL(url.format({
