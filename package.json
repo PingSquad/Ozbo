@@ -4,6 +4,7 @@
   "description": "Desktop toy",
   "main": "index.js",
   "scripts": {
+    "prestart": "node-sass --include-path scss scss/main.scss css/main.css",
     "start": "electron .",
     "build-css": "node-sass --include-path scss scss/main.scss css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
