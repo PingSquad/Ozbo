@@ -42,3 +42,6 @@ css/
 
 # webstorm
 .idea
+
+# sass
+.sass-cache
