@@ -4,6 +4,7 @@
   "description": "Desktop toy",
   "main": "index.js",
   "scripts": {
+    "postinstall": "gem install sass",
     "prestart": "sass --update sass:css",
     "start": "electron .",
     "build-css": "sass --update sass:css",
