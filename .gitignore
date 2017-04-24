@@ -44,6 +44,3 @@ static/
 
 # webstorm
 .idea
-
-# sass
-.sass-cache
