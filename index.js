@@ -10,10 +10,22 @@ const menu = electron.Menu;
 var mainWindow;
 var sysTray;
 app.on('ready', function(){
+    // please test on other OSes
+    var {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
+
     mainWindow = new browserWindow({
+      width: width,
+      height: height,
+      resizable: false,
       transparent: true,
       frame: false,
-      fullscreen: true
+      fullscreen: false,
+      fullscreenable: false,
+      alwaysOnTop: true,
+      show: false  // fix startup flicker
+    });
+    mainWindow.once('ready-to-show', () => {
+      mainWindow.show()  // fix startup flicker
     });
 
     mainWindow.loadURL(url.format({
