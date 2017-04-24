@@ -39,6 +39,8 @@ jspm_packages
 #
 assets/
 css/
+.sass-cache/
+static/
 
 # webstorm
 .idea

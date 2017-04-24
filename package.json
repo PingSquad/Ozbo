@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "gem install sass",
-    "prestart": "sass --update sass:css",
-    "start": "electron .",
-    "build-css": "sass --update sass:css",
-    "watch-css": "sass --watch sass:css"
+    "prestart": "gulp",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -23,6 +21,10 @@
       "name": "UltimatePancake",
       "email": "pier.gaetani@gmail.com",
       "url": "https://github.com/UltimatePancake"
+    },
+    {
+      "name": "Chovin",
+      "url": "https://github.com/Chovin"
     }
   ],
   "license": "GPL-3.0",
@@ -32,6 +34,9 @@
   "homepage": "https://github.com/PingSquad/Ozbo#readme",
   "devDependencies": {
     "electron": "^1.6.5",
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
     "pug": "^2.0.0-beta.12"
   }
 }
