@@ -3,9 +3,9 @@ const path = require('path');
 const url = require('url');
 
 const app = electron.app;
-const browserWindow = electron.BrowserWindow;
-const tray = electron.Tray;
-const menu = electron.Menu;
+const BrowserWindow = electron.BrowserWindow;
+const Tray = electron.Tray;
+const Menu = electron.Menu;
 
 var mainWindow;
 var sysTray;
@@ -13,7 +13,7 @@ app.on('ready', function(){
     // please test on other OSes
     var {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
 
-    mainWindow = new browserWindow({
+    mainWindow = new BrowserWindow({
       width: width,
       height: height,
       resizable: false,
@@ -34,9 +34,9 @@ app.on('ready', function(){
       slashes: true,
     }));
 
-    sysTray = new tray('assets/icon.png');
+    sysTray = new Tray('assets/icon.png');
 
-    const contextMenu = menu.buildFromTemplate([
+    const contextMenu = Menu.buildFromTemplate([
       {label: 'Quit', type: 'normal', role: 'quit'}
     ]);
     sysTray.setToolTip('Wrong neighborhood...');
