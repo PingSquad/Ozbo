@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 gulp.task('html', function(){
   return gulp.src('./views/*.pug')
     .pipe(pug())
-    .pipe(gulp.dest('./static'));
+    .pipe(gulp.dest('./html'));
 });
 
 gulp.task('css', function(){

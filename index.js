@@ -17,7 +17,7 @@ app.on('ready', function(){
     });
 
     mainWindow.loadURL(url.format({
-      pathname: path.join(__dirname, 'static', 'main.html'),
+      pathname: path.join(__dirname, 'html', 'main.html'),
       protocol: 'file',
       slashes: true,
     }));

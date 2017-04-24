@@ -36,11 +36,15 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-#
-assets/
-css/
-.sass-cache/
-static/
-
 # webstorm
 .idea
+
+# sass
+.sass-cache/
+
+# compiled
+css/
+html/
+
+# other
+assets/
