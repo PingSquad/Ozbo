@@ -4,10 +4,10 @@
   "description": "Desktop toy",
   "main": "index.js",
   "scripts": {
-    "prestart": "node-sass --include-path sass sass/main.sass css/main.css",
+    "prestart": "sass --update sass:css",
     "start": "electron .",
-    "build-css": "node-sass --include-path sass sass/main.sass css/main.css",
-    "watch-css": "nodemon -e sass -x \"npm run build-css\""
+    "build-css": "sass --update sass:css",
+    "watch-css": "sass --watch sass:css"
   },
   "repository": {
     "type": "git",
@@ -31,7 +31,6 @@
   "homepage": "https://github.com/PingSquad/Ozbo#readme",
   "devDependencies": {
     "electron": "^1.6.5",
-    "node-sass": "^4.5.2",
-    "nodemon": "^1.11.0"
+    "pug": "^2.0.0-beta.12"
   }
 }
