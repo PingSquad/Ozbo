@@ -57,13 +57,13 @@ app.on('ready', () => {
     createSysTrayMenu()
 });
 
-app.on('window-all-closed', function () {
+app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {  // imitate Mac OS X app behavior
     app.quit()
   }
 });
 
-app.on('activate', function () {
+app.on('activate', () => {
   if (mainWindow === null) {  // imitate Mac OS X app behavior
     createWindow()
   }
