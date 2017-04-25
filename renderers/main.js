@@ -21,25 +21,25 @@ screen.width = workAreaSize.width;
 screen.height = workAreaSize.height;
 
 var renderer = PIXI.autoDetectRenderer(
-	screen.width, screen.height,
-	{antialias: false, transparent: true, resolution: 1}
+  screen.width, screen.height,
+  {antialias: false, transparent: true, resolution: 1}
 );
 screen.appendChild(renderer.view);
 
 var stage = new PIXI.Container();
 
 PIXI.loader
-	.add("../pets/cookieman.gif")
-	.load(setup);
+  .add("../pets/cookieman.gif")
+  .load(setup);
 
 function setup() {
-	var cman = new PIXI.Sprite(
-		PIXI.loader.resources["../pets/cookieman.gif"].texture
-	);
+  var cman = new PIXI.Sprite(
+    PIXI.loader.resources["../pets/cookieman.gif"].texture
+  );
 
-	stage.addChild(cman);
+  stage.addChild(cman);
 
-	renderer.render(stage);
+  renderer.render(stage);
 }
 
 /**
@@ -50,6 +50,6 @@ function setup() {
  * @return {*} random item from list
  */
 function randChoice(list) {
-	return list[list.length * Math.random() | 0]
+  return list[list.length * Math.random() | 0]
 }
 
