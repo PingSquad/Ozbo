@@ -12,8 +12,8 @@ var browserWindow = remote.getCurrentWindow();
 // var canClickThrough = false;
 // browserWindow.setIgnoreMouseEvents(canClickThrough);
 
-var screen = electron.screen;
-var workAreaSize = electron.screen.getPrimaryDisplay().workAreaSize;
+var eScreen = electron.screen;
+var workAreaSize = electron.eScreen.getPrimaryDisplay().workAreaSize;
 
 var screen = document.getElementById('screen');
 // set screen canvas w/h
