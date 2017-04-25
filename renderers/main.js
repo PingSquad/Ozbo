@@ -42,3 +42,14 @@ function setup() {
 	renderer.render(stage);
 }
 
+/**
+ * Returns a random value from the array given
+ *
+ * @param {*[]} list - array of things to choose from
+ *
+ * @return {*} random item from list
+ */
+function randChoice(list) {
+	return list[list.length * Math.random() | 0]
+}
+
