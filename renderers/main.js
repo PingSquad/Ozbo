@@ -2,6 +2,11 @@
 
 const electron = require('electron');
 var PIXI = require('pixi.js');
+const filesystem = require('graceful-fs');
+const sizeOf = require('image-size');
+
+// gather sprites
+var sptriteSheet = gatherSpritePaths('assets/sprites')
 
 // var pixiApp = new PIXI.Application();
 
@@ -40,6 +45,60 @@ function setup() {
 
   renderer.render(stage);
 }
+
+/**
+ * Given a base directory to look through, returns object of format
+ * {
+ *   "cookieman": {
+ *     width:  50,
+ *     height: 50,
+ *     frames: [
+ *       "cookieman-000.png",
+ *       "cookieman-001.png"
+ *     ]
+ *   },
+ *   "Dinnerb0ne": {...}
+ * }
+ * *Only checks for .png atm
+ * *Assumes images are the same size
+ * @param  {String} basepath - base filepath to look through for sprite folders
+ * @return {Object}            object describing sprites in the given basepath
+ */
+function gatherSpritePaths(basepath) {
+  sprites = {}
+  filesystem.readdirSync(basepath).forEach( (file) => {
+    if (file.includes('.')) {
+      return;
+    }
+    sprites[file] = {
+      width: 0,
+      height: 0,
+      frames: []
+    };
+    dir_path = basepath + '/' + file;
+    filesystem.readdirSync(dir_path).forEach( (img_file) => {
+      if (!img_file.endsWith('.png')) {
+        return;
+      }
+      path = dir_path+'/'+img_file;
+      if (!sprites[file].frames.length) {
+        dims = sizeOf(path);
+        sprites[file].width = dims.width
+        sprites[file].height = dims.height
+        /*
+        // async
+        sizeOf(path, function(err, dims) {
+          sprites[file].width = dims.width
+          sprites[file].height = dims.height
+        });*/
+      }
+      sprites[file].frames.push(path)
+    });
+  });
+  console.log(sprites);
+  return sprites
+}
+
 
 /**
  * Returns a random value from the array given
