@@ -1,0 +1,40 @@
+{
+  "name": "ozbo",
+  "version": "0.0.1",
+  "description": "Desktop toy",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "gulp",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PingSquad/Ozbo.git"
+  },
+  "author": {
+    "name": "PingSquad",
+    "url": "https://github.com/PingSquad"
+  },
+  "contributors": [
+    {
+      "name": "UltimatePancake",
+      "email": "pier.gaetani@gmail.com",
+      "url": "https://github.com/UltimatePancake"
+    },
+    {
+      "name": "Chovin",
+      "url": "https://github.com/Chovin"
+    }
+  ],
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/PingSquad/Ozbo/issues"
+  },
+  "homepage": "https://github.com/PingSquad/Ozbo#readme",
+  "devDependencies": {
+    "electron": "^1.6.5",
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
