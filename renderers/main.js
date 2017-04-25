@@ -1,7 +1,7 @@
 // https://github.com/kittykatattack/learningPixi#installingpixiwithnodeandgulp
 
 const electron = require('electron');
-var PIXI = require('pixi.js');
+const PIXI = require('pixi.js');
 const filesystem = require('graceful-fs');
 const sizeOf = require('image-size');
 
